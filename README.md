@@ -16,9 +16,9 @@ npm install
 
 Copy *config.default.json* to *config.json* and open it in a text editor. Here you can change the following configuration options:
 
-- **discordToken**: The Discord bot token. You can obtain one by following [this guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token).
+- **discordToken**: The Discord bot token. One can obtained by following [this guide](https://github.com/reactiflux/discord-irc/wiki/Creating-a-discord-bot-&-getting-a-token).
 - **discordChannelID**: The ID of the channel where the bot shall print its messages. It can be obtained by right clicking on a Discord channel and selecting *Copy ID*.
-- **sauertrackerApiUrl**: The SauertTracker query URL. For example `http://sauertracker.net/api/games/find?gametype=duel&serverdesc=something` will find duels played on a server whose description contains *something*.
+- **sauertrackerApiUrl**: The SauertTracker query URL. For example, `http://sauertracker.net/api/games/find?gametype=duel&serverdesc=something` will find duels played on a server whose description contains *something*.
 
 ## Running
 
