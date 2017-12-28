@@ -25,5 +25,5 @@ Copy *config.default.json* to *config.json* and open it in a text editor. Here y
 Run the following command (use screen or tmux in order to create a persistent session):
 
 ```
-node main.js
+node index.js
 ```
