@@ -25,7 +25,7 @@ function update() {
         for (let i in newGames) {
             let game = newGames[i];
             game.meta = game.meta || [];
-            let description = `${game.serverdesc}: **${game.meta[2]}** def. **${game.meta[0]}** (*${game.meta[3]}* - *${game.meta[1]}*)`;
+            let description = `${game.serverdesc}: **${game.meta[2]}** def. **${game.meta[0]}** (${game.meta[3]} - ${game.meta[1]}, ${game.map} ${game.gamemode})`;
             let messageURL = `https://sauertracker.net/game/${game.id}`;
             let authorName = 'Game Ended';
             let authorURL = `https://sauertracker.net/game/${game.id}`;
