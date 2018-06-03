@@ -44,7 +44,7 @@ function update() {
 
 discordClient.on('ready', () => {
     console.log('I am ready!');
-    setInterval(update, 5000);
+    setInterval(update, 60000);
     update();
 });
 
