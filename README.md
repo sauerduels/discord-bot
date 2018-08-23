@@ -27,3 +27,7 @@ Run the following command (use screen or tmux in order to create a persistent se
 ```
 node index.js
 ```
+
+## Commands
+
+`.deleteafter [MSG_ID]`: Deletes all messages in current channel after (but not including) MSG_ID. Requires Manage Messages permission on the server.
