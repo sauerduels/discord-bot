@@ -48,4 +48,30 @@ discordClient.on('ready', () => {
     update();
 });
 
+let usageErrorMsg = 'usage error. Correct syntax is `.deletesince [msg_id]`';
+
+discordClient.on('message', msg => {
+    if (msg.content.startsWith('.deleteafter')) {
+        parts = msg.content.split(' ');
+        if (parts.length < 2) {
+            msg.reply(usageErrorMsg);
+            return;
+        }
+        msgid = parts[1];
+        if (!msgid) {
+            msg.reply(usageErrorMsg);
+            return;
+        }
+        msg.channel.fetchMessages({after: msgid})
+            .then(messages => {
+                messages.forEach((value, key) => {
+                    value.delete();
+                });
+            })
+            .catch(error => {
+                msg.reply(error.toString());
+            });
+    }
+});
+
 discordClient.login(discordToken);
