@@ -1,13 +1,17 @@
+const fs = require('fs')
 const _ = require('lodash');
 const request = require('request');
 const Discord = require('discord.js');
 const discordClient = new Discord.Client();
 
-const config = require('./config.json');
+let config = {}
+if (fs.existsSync('./config.json')) {
+    config = require('./config.json');
+}
 
-const discordToken = config.discordToken;
-const discordChannelID = config.discordChannelID;
-const apiUrl = config.sauertrackerApiUrl;
+const discordToken = process.env.DISCORDTOKEN || config.discordToken;
+const discordChannelID = process.env.DISCORDCHANNELID || config.discordChannelID;
+const apiUrl = process.env.SAUERTRACKERAPIURL || config.sauertrackerApiUrl;
 
 let lastResp = [];
 
